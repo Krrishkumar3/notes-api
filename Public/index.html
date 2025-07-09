@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Notes App</title>
+</head>
+<body>
+  <h1>Notes</h1>
+  <input id="title" placeholder="Title">
+  <input id="content" placeholder="Content">
+  <button onclick="addNote()">Add Note</button>
+  <ul id="notes"></ul>
+
+  <script>
+    const api = 'http://localhost:3000/notes';
+
+    function loadNotes() {
+      fetch(api)
+        .then(res => res.json())
+        .then(data => {
+          document.getElementById('notes').innerHTML =
+            data.map(note => `<li><b>${note.title}</b>: ${note.content}</li>`).join('');
+        });
+    }
+
+    function addNote() {
+      const title = document.getElementById('title').value;
+      const content = document.getElementById('content').value;
+
+      fetch(api, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ title, content })
+      }).then(() => {
+        loadNotes();
+        document.getElementById('title').value = '';
+        document.getElementById('content').value = '';
+      });
+    }
+
+    loadNotes();
+  </script>
+</body>
+</html>
