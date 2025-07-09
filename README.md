@@ -2,8 +2,9 @@
 
 A beginner-friendly REST API for managing simple notes. Built using **Node.js**, **Express.js**, and file-based storage (`notes.json`) — no database required.
 
-> Created by KRRISH KUMAR, 2nd-year B.Tech student at Delhi Technological University.  
-> [Live Demo on Railway](#) | [GitHub Repo](https://github.com/Krrishkumar3/notes-api)
+> Created by Krrish Kumar, 2nd-year B.Tech student at Delhi Technological University.  
+<!-- > [Live Demo on Railway](#) |  -->
+> [GitHub Repo](https://github.com/Krrishkumar3/notes-api)
 
 ---
 
@@ -25,9 +26,9 @@ A beginner-friendly REST API for managing simple notes. Built using **Node.js**,
 
 ---
 
-## 🔧 Setup Instructions (Run Locally)
+<!-- ## 🔧 Setup Instructions (Run Locally) -->
 
 ### 1. Clone this repository
 ```bash
-git clone https://github.com/your-username/notes-api.git
+git clone https://github.com/Krrishkumar3/notes-api.git
 cd notes-api
