@@ -49,3 +49,4 @@ app.delete('/notes/:id', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
+app.use(express.static('public'));
