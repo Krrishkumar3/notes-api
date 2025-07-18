@@ -4,8 +4,6 @@ const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const fs = require('fs');
-
 if (!fs.existsSync('notes.json')) {
   fs.writeFileSync('notes.json', '[]');
 }
